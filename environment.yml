@@ -11,3 +11,4 @@ dependencies:
   - dash
   - ipywidgets>=7.5
   - dash-bootstrap-components
+  - gunicorn
