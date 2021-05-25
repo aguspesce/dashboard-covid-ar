@@ -400,4 +400,4 @@ def update_graph(selected_provincia):
 
 
 if __name__ == "__main__":
-    app.run_server(debug=True, port=8888)
+    app.run_server(debug=False)
