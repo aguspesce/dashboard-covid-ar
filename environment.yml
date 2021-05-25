@@ -1,0 +1,13 @@
+name: interactive
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - numpy
+  - pandas
+  - jupyterlab
+  - matplotlib
+  - plotly
+  - dash
+  - ipywidgets>=7.5
+  - dash-bootstrap-components
