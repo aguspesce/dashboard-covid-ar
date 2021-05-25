@@ -2,13 +2,13 @@
 
 Código fuente del dashboard escrito en Python usando plotly Dash y un .css de
 Bootstrap.
-El app se encuentra servido por Heroku: []()
+El app se encuentra servido por Heroku: [https://dashboard-covid-ar.herokuapp.com/](https://dashboard-covid-ar.herokuapp.com/)
 
 ---
 
 Soures code for the dashboard based on plotly Dash, written in Python and
 including layout customisations with .css Bootstrap.
-The app has been deployed on Heroku and is visible here: []()
+The app has been deployed on Heroku and is visible here: [https://dashboard-covid-ar.herokuapp.com/](https://dashboard-covid-ar.herokuapp.com/)
 
 ## Fuente de datos / Data source
 
