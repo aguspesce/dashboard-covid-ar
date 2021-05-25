@@ -1,6 +1,6 @@
 _Datos tomados de [Covid19arData](https://github.com/SistemasMapache/Covid19arData) por [Sistema Mapache](https://smapache.com.ar/es/)._
 
-Source code available in [github.com/aguspesce/nombre](https://direccion).
+Source code available in [github.com/aguspesce/dashboard-covid-ar](https://github.com/aguspesce/dashboard-covid-ar).
 This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
 
 # Síntomas

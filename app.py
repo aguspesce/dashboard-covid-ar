@@ -21,11 +21,11 @@ data = load_data(url)
 with open("text_block.md", "r") as f:
     intro_md = f.readlines()[0]
 with open("text_block.md", "r") as f:
-    footer_md = f.readlines()[1:4]
+    footer_md = f.readlines()[2:4]
 with open("text_block.md", "r") as f:
-    sintomas_md = f.readlines()[6]
+    sintomas_md = f.readlines()[7]
 with open("text_block.md", "r") as f:
-    sintomas2_md = f.readlines()[7:]
+    sintomas2_md = f.readlines()[9:]
 
 # --------- Generate the option for the Dropdown ----------
 provincias = [
@@ -87,7 +87,9 @@ tab1_content = dbc.Card(
             ),
             dbc.Row(
                 [
-                    dbc.Col(dcc.Graph(figure=plot_casos_argentina), md=6, sm=12),
+                    dbc.Col(
+                        dcc.Graph(figure=plot_casos_argentina), md=6, sm=12
+                    ),
                     dbc.Col(
                         dcc.Graph(figure=plot_fallecidos_argentina),
                         md=6,
@@ -132,7 +134,9 @@ tab2_content = dbc.Card(
             ),
             dbc.Row(
                 [
-                    dbc.Col(dcc.Graph(id="casos_diarios", figure={}), md=6, sm=12),
+                    dbc.Col(
+                        dcc.Graph(id="casos_diarios", figure={}), md=6, sm=12
+                    ),
                     dbc.Col(
                         dcc.Graph(id="fallecidos_diarios", figure={}),
                         md=6,
@@ -212,10 +216,10 @@ app = dash.Dash(
     external_stylesheets=[
         # dbc.themes.BOOTSTRAP
     ],
-    #suppress_callback_exceptions=True,
-    #meta_tags=[
-        #{"name": "viewport", "content": "width=device-width, initial-scale=1.0"}
-    #],
+    # suppress_callback_exceptions=True,
+    # meta_tags=[
+    # {"name": "viewport", "content": "width=device-width, initial-scale=1.0"}
+    # ],
 )
 server = app.server
 app.title = "Casos Covid"
