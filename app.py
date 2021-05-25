@@ -13,7 +13,7 @@ from plot_argentina import (
     plot_fallecidos_acum_argentina,
 )
 
-# ---------- Load the data ---------- 
+# ---------- Load the data ----------
 url = "https://docs.google.com/spreadsheets/d/16-bnsDdmmgtSxdWbVMboIHo5FRuz76DBxsz_BbsEVWA/export?format=csv&id=16-bnsDdmmgtSxdWbVMboIHo5FRuz76DBxsz_BbsEVWA&gid=0"
 data = load_data(url)
 
@@ -64,8 +64,9 @@ controls = (
                 id="selector-provincia",
                 options=options,
                 value="Buenos Aires",
+                style={"color": "black"},
             ),
-        ]
+        ],
     ),
 )
 
@@ -86,18 +87,14 @@ tab1_content = dbc.Card(
             ),
             dbc.Row(
                 [
-                    dbc.Col(
-                        dcc.Graph(figure=plot_casos_argentina),
-                        md=6, 
-                        sm=12
-                    ),
+                    dbc.Col(dcc.Graph(figure=plot_casos_argentina), md=6, sm=12),
                     dbc.Col(
                         dcc.Graph(figure=plot_fallecidos_argentina),
                         md=6,
                         sm=12,
                     ),
                 ],
-                style={"margin-bottom": "20px", "margin-top": "20px"}
+                style={"margin-bottom": "20px", "margin-top": "20px"},
             ),
             dbc.Row(
                 [
@@ -112,7 +109,7 @@ tab1_content = dbc.Card(
                         sm=12,
                     ),
                 ],
-                style={"margin-bottom": "20px", "margin-top": "20px"}
+                style={"margin-bottom": "20px", "margin-top": "20px"},
             ),
             dbc.Row(dcc.Markdown(intro_md, dangerously_allow_html=True)),
         ]
@@ -129,17 +126,13 @@ tab2_content = dbc.Card(
             ),
             # Primera fila con el dropdown
             dbc.Row(
-                dbc.Col(controls, width=6), 
-                align="center", 
-                style={"margin-bottom": "20px", "margin-top": "20px"}
-                ),
+                dbc.Col(controls, width=6),
+                align="center",
+                style={"margin-bottom": "20px", "margin-top": "20px"},
+            ),
             dbc.Row(
                 [
-                    dbc.Col(
-                        dcc.Graph(id="casos_diarios", figure={}), 
-                        md=6,
-                        sm=12
-                    ),
+                    dbc.Col(dcc.Graph(id="casos_diarios", figure={}), md=6, sm=12),
                     dbc.Col(
                         dcc.Graph(id="fallecidos_diarios", figure={}),
                         md=6,
@@ -147,7 +140,7 @@ tab2_content = dbc.Card(
                     ),
                 ],
                 justify="around",
-                style={"margin-bottom": "20px", "margin-top": "20px"}
+                style={"margin-bottom": "20px", "margin-top": "20px"},
             ),
             dbc.Row(
                 [
@@ -163,12 +156,12 @@ tab2_content = dbc.Card(
                     ),
                 ],
                 justify="around",
-                style={"margin-bottom": "20px", "margin-top": "20px"}
+                style={"margin-bottom": "20px", "margin-top": "20px"},
             ),
             dbc.Row(
                 dcc.Markdown(intro_md, dangerously_allow_html=True),
-                style={"margin-bottom": "20px", "margin-top": "20px"}
-                ),
+                style={"margin-bottom": "20px", "margin-top": "20px"},
+            ),
         ]
     ),
     className="mt-3",
@@ -185,7 +178,7 @@ tab3_content = [
                 ),
                 dbc.CardImg(
                     src="assets/img/sintomas.jpg",
-                    style={"margin-bottom": "20px", "margin-top": "20px"}
+                    style={"margin-bottom": "20px", "margin-top": "20px"},
                 ),
                 html.P(
                     dcc.Markdown(sintomas2_md, dangerously_allow_html=True),
@@ -193,20 +186,20 @@ tab3_content = [
                 ),
             ]
         ),
-        style={"margin-bottom": "20px", "margin-top": "20px"}
+        style={"margin-bottom": "20px", "margin-top": "20px"},
     ),
     dbc.Card(
         dbc.CardBody(
             [
                 html.H2("Prevención", className="card-title"),
                 dbc.CardImg(
-                    src="assets/img/recomendaciones.jpg", 
-                    bottom=True, 
-                    style={"margin-bottom": "20px", "margin-top": "20px"}
+                    src="assets/img/recomendaciones.jpg",
+                    bottom=True,
+                    style={"margin-bottom": "20px", "margin-top": "20px"},
                 ),
             ]
         ),
-        style={"margin-bottom": "20px", "margin-top": "20px"}
+        style={"margin-bottom": "20px", "margin-top": "20px"},
     ),
 ]
 
@@ -250,7 +243,7 @@ app.layout = dbc.Container(
         html.Div(
             html.P(
                 dcc.Markdown(footer_md, dangerously_allow_html=True),
-                className="text-center"
+                className="text-center",
             ),
         ),
     ],
