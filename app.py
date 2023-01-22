@@ -1,6 +1,5 @@
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc, html
 import plotly.graph_objs as go
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
@@ -87,9 +86,7 @@ tab1_content = dbc.Card(
             ),
             dbc.Row(
                 [
-                    dbc.Col(
-                        dcc.Graph(figure=plot_casos_argentina), md=6, sm=12
-                    ),
+                    dbc.Col(dcc.Graph(figure=plot_casos_argentina), md=6, sm=12),
                     dbc.Col(
                         dcc.Graph(figure=plot_fallecidos_argentina),
                         md=6,
@@ -134,9 +131,7 @@ tab2_content = dbc.Card(
             ),
             dbc.Row(
                 [
-                    dbc.Col(
-                        dcc.Graph(id="casos_diarios", figure={}), md=6, sm=12
-                    ),
+                    dbc.Col(dcc.Graph(id="casos_diarios", figure={}), md=6, sm=12),
                     dbc.Col(
                         dcc.Graph(id="fallecidos_diarios", figure={}),
                         md=6,
