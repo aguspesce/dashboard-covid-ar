@@ -8,15 +8,13 @@ cambio de sus términos y condiciones ya no uso el servicio.
 
 ---
 
-Sources code for the dashboard based on plotly Dash, written in Python and
-including layout customisations with .css Bootstrap.
+The source code for this dashboard was written in Python using Plotly Dash and a Bootstrap .css file for layout customization.
 
-Previously, I used to deploy the dashboard using Heroku, but due to a change of
-its terms and conditions, I no longer use the service.
+Previously, I deployed the dashboard on Heroku, but due to changes in their terms and conditions, I no longer use that service.
 
 ![screenshot](assets/img/screenshot.png)
 
-## Dependencias / Dependencies
+## Dependencies
 
 - pip
 - pandas
@@ -26,35 +24,10 @@ its terms and conditions, I no longer use the service.
 - gunicorn
 - dash-bootstrap-components
 
-## Como desplegar el dashboard en su PC local / How to deploy the dashbor in your local CP
-
-Si ya tiene instalado Anaconda o Miniconda, puede omitir este paso.
-De lo contrario, siga las instrucciones para poner en funcionamiento Anaconda
-en su sistema:
-[https://docs.anaconda.com/anaconda/install/](https://docs.anaconda.com/anaconda/install/)
-
-Ahora puede instalar todas las dependencias a través del administrador de
-paquetes conda:
-```
-conda env crear -f environment.yml
-```
-
-Y luego activar el entorno:
-```
-conda activate interactive
-```
-
-Puede usar el archivo Makefile para crear y servir el dashboard:
-```
-make server
-```
-El dashboard se abrirá en su navegador predeterminado.
-
----
+## Local Deployment
 
 If you already have Anaconda or Miniconda installed, you can skip this step.
-If not, please follow the instructions for getting Anaconda up and running in
-your system:
+Otherwise, follow the instructions for setting up Anaconda in your system:
 [https://docs.anaconda.com/anaconda/install/](https://docs.anaconda.com/anaconda/install/)
 
 
@@ -75,27 +48,16 @@ make server
 The dashboard will be open in your default browser.
 
 
-## Fuente de datos / Data source
-
-Los datos utilizados para graficar fueron obtenidos de repositorio
-[Covid19arData](https://github.com/SistemasMapache/Covid19arData) recolectados
-por [Sistema Mapache](https://smapache.com.ar/es/).
-
----
+## Data source
 
 The data used to plot was obtained from the
 [Covid19arData repository](https://github.com/SistemasMapache/Covid19arData)
 collected by [Mapache System](https://smapache.com.ar/es/).
 
 
-## Licencia / License
+## License
 
-El dashboard y el script para crearlo están bajo licencia
-[Creative Commons Attribution 4.0 International License][cc-by].
-
----
-
-The dashboard and the code are under license
+The dashboard and the script to create it are licensed under a 
 [Creative Commons Attribution 4.0 International License] [cc-by].
 
 [![CC BY 4.0][cc-by-image]][cc-by]
